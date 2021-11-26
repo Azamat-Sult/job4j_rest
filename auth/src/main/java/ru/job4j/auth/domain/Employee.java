@@ -93,16 +93,12 @@ public class Employee {
             return false;
         }
         Employee employee = (Employee) o;
-        return id == employee.id && taxId == employee.taxId
-                && Objects.equals(name, employee.name)
-                && Objects.equals(surname, employee.surname)
-                && Objects.equals(hireDate, employee.hireDate)
-                && Objects.equals(accounts, employee.accounts);
+        return id == employee.id;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, surname, taxId, hireDate, accounts);
+        return Objects.hash(id);
     }
 
 }
